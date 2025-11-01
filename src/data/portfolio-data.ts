@@ -12,7 +12,7 @@ export const portfolioData = {
     }
   },
   about: {
-    summary: `Passionate Senior Software Engineer with 3+ years of experience architecting scalable microservices and building high-performance web applications. Proven track record of reducing API response times by 45%, cutting bug reports by 31%, and streamlining support tickets by 90%. Expert in modern web technologies, cloud platforms, and delivering mission-critical enterprise solutions.`,
+    summary: `Passionate Senior Software Engineer with 4 years of experience architecting scalable microservices and building high-performance web applications. Proven track record of reducing API response times by 45%, cutting bug reports by 31%, and streamlining support tickets by 90%. Expert in modern web technologies, cloud platforms, and delivering mission-critical enterprise solutions.`,
     highlights: [
       { value: "45%", label: "API Performance Boost" },
       { value: "31%", label: "Bug Reduction" },
