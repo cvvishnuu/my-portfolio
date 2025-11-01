@@ -1,30 +1,15 @@
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail, Code2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { portfolioData } from "@/data/portfolio-data";
 import { TypeAnimation } from "react-type-animation";
-import { useEffect, useState } from "react";
 
 export const Hero = () => {
   const { personal } = portfolioData;
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
-
-  // Mouse tracking for interactive effects
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
-  const springConfig = { damping: 25, stiffness: 150 };
-  const mouseX = useSpring(useMotionValue(mousePosition.x), springConfig);
-  const mouseY = useSpring(useMotionValue(mousePosition.y), springConfig);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-950 dark:via-blue-950/20 dark:to-purple-950/20">
