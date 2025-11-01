@@ -14,38 +14,47 @@ export const Skills = () => {
   });
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
+  // Function to get proficiency label based on rating
+  const getProficiencyLabel = (proficiency: number): string => {
+    if (proficiency > 90) return "Expert";
+    if (proficiency > 80) return "Advanced";
+    if (proficiency > 70) return "Proficient";
+    if (proficiency >= 60) return "Intermediate";
+    return "Beginner";
+  };
+
   const skillCategories = [
     {
       title: "Languages",
-      items: skills.languages.map((skill) => ({ name: skill, proficiency: 90 })),
+      items: skills.languages,
       icon: Code,
       color: "from-blue-500 to-cyan-500",
       glowColor: "rgba(59, 130, 246, 0.5)",
     },
     {
       title: "Frameworks",
-      items: skills.frameworks.map((skill) => ({ name: skill, proficiency: 92 })),
+      items: skills.frameworks,
       icon: Layers,
       color: "from-purple-500 to-pink-500",
       glowColor: "rgba(168, 85, 247, 0.5)",
     },
     {
       title: "Tools",
-      items: skills.tools.map((skill) => ({ name: skill, proficiency: 88 })),
+      items: skills.tools,
       icon: Wrench,
       color: "from-orange-500 to-red-500",
       glowColor: "rgba(249, 115, 22, 0.5)",
     },
     {
       title: "Platforms",
-      items: skills.platforms.map((skill) => ({ name: skill, proficiency: 85 })),
+      items: skills.platforms,
       icon: Cloud,
       color: "from-green-500 to-teal-500",
       glowColor: "rgba(34, 197, 94, 0.5)",
     },
     {
       title: "Databases",
-      items: skills.databases.map((skill) => ({ name: skill, proficiency: 87 })),
+      items: skills.databases,
       icon: Database,
       color: "from-indigo-500 to-blue-500",
       glowColor: "rgba(99, 102, 241, 0.5)",
@@ -224,7 +233,7 @@ export const Skills = () => {
                                 }}
                                 className="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded-full"
                               >
-                                Expert
+                                {getProficiencyLabel(skill.proficiency)}
                               </motion.span>
                             </div>
                             {/* Animated Progress Bar */}

@@ -73,11 +73,33 @@ export const portfolioData = {
     }
   ],
   skills: {
-    languages: ["JavaScript", "TypeScript", "Java", "HTML", "CSS", "SQL"],
-    frameworks: ["React", "React Native", "Node.JS", "Express.JS", "Nest.JS"],
-    tools: ["Postman", "SonarQube", "Github", "Git"],
-    platforms: ["Microsoft Azure"],
-    databases: ["Postgres", "Azure SQL", "Microsoft SQL Server"]
+    languages: [
+      { name: "JavaScript", proficiency: 80 },
+      { name: "TypeScript", proficiency: 70 },
+      { name: "Java", proficiency: 40 },
+      { name: "HTML", proficiency: 85 },
+      { name: "CSS", proficiency: 85 },
+      { name: "SQL", proficiency: 85 }
+    ],
+    frameworks: [
+      { name: "React", proficiency: 75 },
+      { name: "React Native", proficiency: 55 },
+      { name: "Express.JS", proficiency: 80 },
+      { name: "Nest.JS", proficiency: 85 }
+    ],
+    tools: [
+      { name: "Postman", proficiency: 90 },
+      { name: "SonarQube", proficiency: 55 },
+      { name: "Github", proficiency: 85 }
+    ],
+    platforms: [
+      { name: "Microsoft Azure", proficiency: 50 }
+    ],
+    databases: [
+      { name: "Postgres", proficiency: 70 },
+      { name: "Azure SQL", proficiency: 75 },
+      { name: "Microsoft SQL Server", proficiency: 75 }
+    ]
   },
   education: {
     degree: "B.E in Computer Science",
